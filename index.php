@@ -1,6 +1,6 @@
 <?php
     include_once("dbConnection/mysqlconfig_connection.php");
-    include_once("fuctions/fetch.php");
+    include_once("functions/fetch.php");
 ?>
 
 <!DOCTYPE html>
@@ -21,14 +21,15 @@
             <?php
                 while($res = mysqli_fetch_array($result)) {
                     echo "<tr>";
-                    echo "<td>".$res['subject_id']."</td>";
-                    echo "<td>".$res['subject_code']."</td>";
-                    echo "<td>".$res['subject_name']."</td>";
-                    echo "<td><a href=\"forms/editform.php?id=$res[subject_id]\">Edit</a> |
-                            <a href=\"functions/delete.php?id=$res[subject_id]\" 
+                    echo "<td>".$res['SUBJECT_ID']."</td>";
+                    echo "<td>".$res['SUBJECT_CODE']."</td>";
+                    echo "<td>".$res['SUBJECT_NAME']."</td>";
+                    echo "<td><a href=\"forms/editform.php?id=$res[SUBJECT_ID]\">Edit</a> |
+                            <a href=\"functions/delete.php?id=$res[SUBJECT_ID]\" 
                             onclick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
                 }
             ?>
         </table>
+        </form>
     </body>
 </html>

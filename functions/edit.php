@@ -12,11 +12,11 @@
             if(empty($name)) {
                 echo "<font color='red'>Subject Name field is empty.</font><br/>";  
             }
-            else {
-                mysqli_query($dbc, "UPDATE TBLSUBJECT SET SUBJECT_CODE='$code', SUBJECT_NAME='$name' WHERE SUBJECT_ID='$id'");
-
-                header("Location: ../index.php");
-            }
         }
+        else {
+            mysqli_query($dbc, "UPDATE TBLSUBJECTS SET SUBJECT_CODE='$code', SUBJECT_NAME='$name' WHERE SUBJECT_ID='$id'");
+    
+            header("Location:../index.php");
+            }
     }
 ?>

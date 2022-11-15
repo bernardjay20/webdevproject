@@ -14,7 +14,7 @@
             $code = $_POST['code'];
             $name = $_POST['name'];
 
-            if(empty($code) || emplty(name)) {
+            if(empty($code) || empty($name)) {
                 if(empty($code)) {
                     echo "<font color='red'>Subject Code field is empty.</font><br/>";   
                 }
@@ -25,7 +25,7 @@
                 echo "<br/><a href='javascript:self.history.back();'>Go Back</a>";
             }
             else {
-                $result = mysqli_query($dbc, "INSERT INTO TBLSUBJECT(SUBJECT_CODE, SUBJECT_NAME) VALUES('$code', '$name')");
+                $result = mysqli_query($dbc, "INSERT INTO TBLSUBJECTS(SUBJECT_CODE, SUBJECT_NAME) VALUES('$code', '$name')");
 
                 echo "<font color='green'>Data added Successfully.";
                 echo "<br/><a href='../index.php'>View Result</a>";
