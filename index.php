@@ -16,6 +16,9 @@
                 <td>ID</td>
                 <td>Subject Code</td>
                 <td>Subject Name</td>
+                <td>Syllabus ID</td>
+                <td>Syllabus Code</td>
+                <td>Syllabus Author</td>
                 <td>Action</td>
             </tr>
             <?php
@@ -24,6 +27,9 @@
                     echo "<td>".$res['SUBJECT_ID']."</td>";
                     echo "<td>".$res['SUBJECT_CODE']."</td>";
                     echo "<td>".$res['SUBJECT_NAME']."</td>";
+                    echo "<td>".$res['SYLLABUS_ID']."</td>";
+                    echo "<td>".$res['SYLLABUS_CODE']."</td>";
+                    echo "<td>".$res['SYLLABUS_AUTHOR']."</td>";
                     echo "<td><a href=\"forms/editform.php?id=$res[SUBJECT_ID]\">Edit</a> |
                             <a href=\"functions/delete.php?id=$res[SUBJECT_ID]\" 
                             onclick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
